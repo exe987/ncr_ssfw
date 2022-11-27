@@ -1,0 +1,12 @@
+.lba{
+  text-align: center;
+}
+
+.list_bank_accounts{
+  max-height: 90vh;
+  height: auto;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
