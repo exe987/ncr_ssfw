@@ -8,7 +8,7 @@ const Routing = () => {
     <BrowserRouter>
       <Routes>
         <Route index path='/' element={<HomeBank />} />
-        <Route index path='/a' element={<AccountData />} />
+        <Route path='/:id' element={<AccountData />} />
       </Routes>
     </BrowserRouter>
   );

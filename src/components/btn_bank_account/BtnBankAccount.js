@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import BankDataContext from '../../context/bank_data_context/bank_data_context';
 import './BtnBankAccount.css';
 
-const BtnBankAccount = () => {
+const BtnBankAccount = ({ account_type, account_number, id }) => {
+  const bankDataContext = useContext(BankDataContext);
+  const { selectAccount, getAccountType } = bankDataContext;
+
   return (
-    <button className='btn_ba'>
-      <p>aaa</p>
-      <p>aaa</p>
-    </button>
+    <Link className='btn_ba' to={`/${id}`} onClick={() => selectAccount(account_number)}>
+      <p>{getAccountType(account_type)}</p>
+      <p>{account_number && account_number}</p>
+    </Link>
   );
 };
 
