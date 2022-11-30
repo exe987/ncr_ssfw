@@ -15,7 +15,7 @@ const ListBankAccounts = ({ pagination }) => {
         <div className='list_bank_accounts'>
           {page >= 1 ? (
             <button className='btn_ba' onClick={() => changePage(-1)}>
-              <p>Anterior</p>
+              <p>{'<< Opciones anteriores'}</p>
             </button>
           ) : null}
           {pagination[page]?.map((data, index) => (
@@ -23,7 +23,7 @@ const ListBankAccounts = ({ pagination }) => {
           ))}
           {page <= pages - 2 ? (
             <button className='btn_ba' onClick={() => changePage(1)}>
-              <p>Siguiente</p>
+              <p>{'Más opciones >>'}</p>
             </button>
           ) : null}
         </div>

@@ -10,7 +10,7 @@ const BtnBankAccount = ({ account_type, account_number, id }) => {
   return (
     <Link className='btn_ba' to={`/${id}`} onClick={() => selectAccount(account_number)}>
       <p>{getAccountType(account_type)}</p>
-      <p>{account_number && account_number}</p>
+      <p>N°: {account_number && account_number}</p>
     </Link>
   );
 };
